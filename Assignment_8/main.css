@@ -1,0 +1,12 @@
+div{
+  fontfamily: helvetica;
+  background-color: beige;
+  background-size: auto;
+}
+body{
+  background-image: url("background-image.jpg")
+}
+.bruh {
+  font-size: x-large;
+
+}

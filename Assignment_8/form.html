@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="author" content="Tristan Lilly">
+<meta name="description" content="...">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+
+    <script type="text/javascript">
+      function checkForm()
+      {
+<!-- END OF HEAD -->
+
+
+<!-- NAME -->
+
+        var name;
+        name = document.getElementById("Name").value;
+        if (name == "")
+        {
+          window.alert("Name is required.");
+          document.getElementById("Name").style.backgroundColor="red";
+          document.getElementById("Name").focus();
+        }
+
+        else
+        {
+          document.getElementById("Name").style.backgroundColor="white";
+        }
+
+<!-- EMAIL -->
+
+        var email;
+        email = document.getElementById("Email").value;
+        if (email == "")
+
+        {
+          window.alert("Email is required.");
+          document.getElementById("Email").style.backgroundColor="red";
+          document.getElementById("Email").focus();
+        }
+
+        else
+        {
+        document.getElementById("Email").style.backgroundColor="white";
+        }
+
+<!-- PHONE -->
+
+        var phone;
+        phone = document.getElementById("Phone").value;
+        if (phone == "")
+        {
+          window.alert("Phone is required.")
+          document.getElementById("Phone").style.backgroundColor="red";
+          document.getElementById("Phone").focus();
+        }
+
+        else
+        {
+          document.getElementById("Phone").style.backgroundColor="white";
+        }
+
+<!-- USERAGREEMENT -->
+
+        var useragreement;
+        useragreement = document.getElementsById("Yes").value;
+        useragreement = document.getElementsById("No").value;
+        if (useragreement == "");
+        {
+          window.alert("Useragreement is required.")
+          document.getElementById("Yes").style.backgroundColor="red";
+          document.getElementById("No").style.backgroundColor="red";
+        }
+      }
+
+    </script>
+
+<!-- END OF SCRIPT -->
+
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+
+
+
+
+
+
+  <body>
+
+    <h1>Contact Info</h1>
+    <br>
+    <br>
+
+    <table>
+
+      <tr>
+        <td>Name</td>
+        <td><input type="text" id="Name"></td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td><input type="text" id="Email" value=""></td>
+      </tr>
+
+      <tr>
+        <td>Phone</td>
+        <td><input type="text" id="Phone" value=""></td>
+      </tr>
+
+        <br>
+
+      <tr>
+        <td><input type="radio" name="Agreement" id="Yes">
+
+        <label for="Yes">Yes</label>
+
+        <br>
+
+        <input type="radio" name="Agreement" id="No">
+
+        <label for="No">No</label></td>
+      </tr>
+
+      <tr>
+        <td><button type="button" id="button" onclick="checkForm();">Submit</button></td>
+      </tr>
+    </table>
+
+<br><br>
+
+    <div id="Links" class="">
+      <a href="./HomePage.html"> "Country roooads, take me hoooome... </a>
+      <br>
+      <br>
+      <a href="./Short_Story.html"> Short Story </a>
+    </div>
+  </body>
+</html>
