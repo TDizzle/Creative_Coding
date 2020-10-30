@@ -1,71 +1,81 @@
-    // circles
-      var circleX = 250;
-      var circleY = 100;
-      var circleDirection = 2;
+    var headX = 250;
+    var headY = 250;
+    var headDirection = 1;
 
-      var circle1X = 100;
-      var circle1Y = 250;
-      var circle1Direction = 3;
+    var circleX = 120;
+    var circleY = 200;
+    var circleDirection = 7;
 
-    //rect
-      var rectX = 200;
-      var rectY = 185;
-      var rectDirection = 1;
+    var bodyX = 200;
+    var bodyY = 185;
+    var bodyDirection = 3;
 
-      var rect1X = 100;
-      var rect1Y = 300;
-      var rect1Direction = 1;
+    var rectX = 300;
+    var rectY = 450;
+    var rectDirection = 1;
+
+    var size = 22;
+    var count = 0;
+    var sizeDirection = 2;
+
+function setup()
+{
+    createCanvas(700, 900);
+}
+
+function draw()
+{
+
+    strokeWeight(5);
+
+    background(300,45,78);
+    textSize(100)
+    text("Howdy", 150,100);
+
+    // head
+    fill(255, 204, 0);
+    circle(headX,headY,175);
+    headX+=headDirection;
+    if(headX >= 418 || headX <= 82)
+    {
+        headDirection *= -1;
+    }
+
+    fill(25,100,70);
+    circle(circleX,circleY,75);
+    circleX+=circleDirection;
+    if(circleX >= 500 || circleX <= 25)
+    {
+      circleDirection *= -1;
+    }
+
+    // body
+    fill(10, 24, 120);
+    rect(200,bodyY,100,150);
+    bodyY += bodyDirection;
+    if(bodyY <= 0 || bodyY >= 450 )
+    {
+        bodyDirection *= -1;
+    }
+
+    fill(80,250,90);
+    rect(350,rectY, 15, 170);
+    rectY += rectDirection;
+    if(rectY <= 5 || rectY >= 500)
+    {
+        rectDirection *= -1
+    }
+
+    fill(20);
+    textSize(size);
+    size+= sizeDirection;
+    count++;
+    if(count > 5)
+    {
+        sizeDirection *=-1;
+        count = 0;
+    }
+    text("Tristan Lilly",250,700 );
 
 
-      function setup()
-      {
-        createCanvas(1000, 1200);
-      }
-
-      function draw()
-      {
-
-          background(300,45,78);
-          textSize(22);
-          text("Howdy!",400,80);
-
-          //circleX
-          fill(255, 204, 0);
-          circle(circleX,circleY,175);
-          circleX+=circleDirection;
-          if(circleX >= 420 || circleX <= 80)
-          {
-              circleDirection *= -1;
-          }
-
-          //circle1
-          fill(90, 204, 10);
-          circle(circle1X,circle1Y,20);
-          circle1X+=circle1Direction;
-          if(circle1X >= 500 || circle1X <= 50)
-          {
-              circle1Direction *= -1;
-          }
-
-          // rect
-          fill(51);
-          rect(rectX,rectY,100,150);
-          rectY+=rectDirection;
-          if(bodyY <= 80 || bodyY >= 450 )
-          {
-              rectYDirection *= -1;
-          }
-
-          //rect2
-          fill(8, 0, 20);
-          rect(rec1X,rect1Y,300,150);
-          rect1Y += rect1Direction;
-          if(rect1Y >= 80 || rect1Y <= 750);
-          {
-            rect1Direction *= -1;
-          }
-
-          textSize(20);
-          text("Tristan Lilly",500,100);
-
-        }
+}
