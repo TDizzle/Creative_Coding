@@ -75,7 +75,7 @@ function draw()
         sizeDirection *=-1;
         count = 0;
     }
-    text("Tristan Lilly",250,700 );
+    text("Tristan Lilly",250,700);
 
 
 }
